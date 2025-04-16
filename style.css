@@ -61,8 +61,10 @@ a {
 header {
   text-align: center;
   padding: 2rem 1rem;
-  background: var(--accent);
-  color: white;
+  background-image: url(pexels-jessbaileydesign-1558690.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
 }
 
 .nav {
