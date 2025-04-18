@@ -1,3 +1,15 @@
+const menuToggle = document.getElementById("mobile-menu");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+document.addEventListener("click", (e) => {
+  if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+    navLinks.classList.remove("show");
+  }
+});
 // Dark mode toggle
 const toggleBtn = document.getElementById("mode-toggle");
 const htmlTag = document.documentElement;
@@ -14,15 +26,3 @@ document
     e.preventDefault();
     alert("Thanks for reaching out! I’ll reply super soon 🌸✨");
   });
-
-const emojis = document.querySelectorAll(".floating-emojis span");
-
-emojis.forEach((emoji) => {
-  const left = Math.random() * 100;
-  const delay = Math.random() * 10;
-  const duration = 8 + Math.random() * 5;
-
-  emoji.style.left = `${left}%`;
-  emoji.style.animationDelay = `${delay}s`;
-  emoji.style.animationDuration = `${duration}s`;
-});
