@@ -92,6 +92,23 @@ header {
   font-weight: 500;
 }
 /* Burger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: black;
+  margin: 4px 0;
+  border-radius: 2px;
+}
 
 .menu-toggle.open .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
